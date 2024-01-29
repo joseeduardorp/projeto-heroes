@@ -19,6 +19,11 @@ Este projeto foi desenvolvido como parte do curso de [Imersão em Desenvolviment
 - **Testes Unitários:** Mocha
 - **Cobertura de Testes:** Istanbul
 
+### Front-end
+
+- **HTML**
+- **CSS Framework:** Tailwind CSS
+
 ## Funcionalidades
 
 - Cadastro, atualização, remoção e consulta de heróis.
@@ -31,23 +36,24 @@ Este projeto foi desenvolvido como parte do curso de [Imersão em Desenvolviment
 ## Como Executar
 
 1. Clone este repositório.
-2. Instale as dependências do back-end:
+2. Instale as dependências do back-end e do front-end:
    ```
    cd backend
    npm install
    ```
-   ou
    ```
-   cd backend
-   yarn install
+   cd frontend
+   npm install
    ```
 3. Configure as variáveis de ambiente conforme necessário para conexão com bancos de dados e segredos JWT.
 4. Inicie o servidor back-end:
    ```
+   cd backend
    npm run prod
    ```
-   ou
-   ```
-   yarn prod
-   ```
 5. Acesse a documentação da API em `http://localhost:{PORTA}/documentation`.
+6. Inicie o processo de build do Tailwindcss (se necessário):
+   ```
+   cd frontend
+   npm run tail:build
+   ```

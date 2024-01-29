@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Entrar | Heroes</title>
+
+		<link rel="stylesheet" href="css/output.css" />
+	</head>
+	<body class="w-full h-screen bg-[--body-bg] flex items-center justify-center">
+		<form
+			method="post"
+			class="p-[3rem] bg-white rounded-[1rem] shadow-lg flex flex-col"
+		>
+			<h1 class="mb-2 mx-auto text-[--bold-text] text-[3rem]">Entrar</h1>
+
+			<label class="default-label">
+				Usuário
+				<input
+					type="text"
+					name="username"
+					id="username"
+					class="default-input"
+				/>
+			</label>
+
+			<label class="default-label">
+				Senha
+				<input
+					type="password"
+					name="password"
+					id="password"
+					class="default-input"
+				/>
+			</label>
+
+			<span>
+				Ir para
+				<a href="./cadastrar.html" class="underline">cadastrar</a>.</span
+			>
+
+			<button type="submit" class="default-btn">Entrar</button>
+		</form>
+	</body>
+</html>
