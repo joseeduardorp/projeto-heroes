@@ -77,7 +77,7 @@ async function filter(e) {
 
 		let queries = `skip=${skipInput.value}`;
 		queries += `&limit=${limitInput.value}`;
-		queries += nameInput.value ? `&nomed=${nameInput.value}` : '';
+		queries += nameInput.value ? `&nome=${nameInput.value}` : '';
 
 		const response = await fetch(`${baseURL}/herois?${queries}`, {
 			method: 'GET',
