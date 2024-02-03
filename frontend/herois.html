@@ -4,8 +4,137 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Início | Heroes</title>
+
+		<link rel="stylesheet" href="css/output.css" />
 	</head>
-	<body>
-		<h1>Heróis</h1>
+	<body
+		class="w-full h-screen bg-[--body-bg] overflow-auto relative flex flex-col"
+	>
+		<header class="py-[1rem] px-[2rem] w-full bg-white">
+			<div
+				class="m-auto max-w-[1280px] w-full flex items-center justify-between"
+			>
+				<h1 class="text-[3rem] font-bold">Heróis</h1>
+
+				<button class="default-btn m-0 px-[2rem]">Perfil</button>
+			</div>
+		</header>
+
+		<main class="p-[2rem] h-full">
+			<div class="mb-[2rem] pb-[2rem] border-b border-[#999] flex gap-[1rem]">
+				<button
+					id="open-filter-modal"
+					class="default-btn m-0 px-[2rem] flex-1 md:flex-none"
+				>
+					Filtros
+				</button>
+				<button
+					id="open-new-hero-modal"
+					class="default-btn m-0 px-[2rem] flex-1 md:flex-none"
+				>
+					Novo Herói
+				</button>
+			</div>
+
+			<section
+				id="heroes-container"
+				class="pb-[2rem] grid grid-cols-1 auto-rows-fr gap-[2rem] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+			></section>
+		</main>
+
+		<!-- filters modal -->
+		<div
+			id="filter-overlay"
+			class="w-full h-full bg-black/25 absolute hidden items-center justify-center"
+		>
+			<form
+				id="filter-modal"
+				class="p-[2rem] w-[30rem] h-[40rem] bg-white rounded-[0.8rem] shadow-lg flex flex-col gap-[1.5rem]"
+			>
+				<strong class="text-[2rem]">Filtros</strong>
+
+				<label class="default-label m-0 text-[1.4rem]">
+					Nome:
+					<input
+						type="text"
+						id="name-filter"
+						class="default-input py-[0.5rem] px-[1rem]"
+					/>
+				</label>
+
+				<label class="default-label m-0 text-[1.4rem]">
+					Pular
+					<input
+						type="number"
+						id="skip-filter"
+						min="0"
+						value="0"
+						class="default-input py-[0.5rem] px-[1rem]"
+					/>
+				</label>
+
+				<label class="default-label m-0 text-[1.4rem]">
+					Limite
+					<input
+						type="number"
+						id="limit-filter"
+						min="0"
+						value="0"
+						class="default-input py-[0.5rem] px-[1rem]"
+					/>
+				</label>
+
+				<div class="mt-auto flex gap-[1rem]">
+					<button class="default-btn flex-1 px-0" id="filter-btn">
+						Filtrar
+					</button>
+					<button class="default-btn flex-1 px-0 bg-red-500" id="cancel-btn">
+						Cancelar
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- new hero modal -->
+		<div
+			id="new-hero-overlay"
+			class="w-full h-full bg-black/25 absolute hidden items-center justify-center"
+		>
+			<form
+				id="new-hero-modal"
+				class="p-[2rem] w-[30rem] h-[40rem] bg-white rounded-[0.8rem] shadow-lg flex flex-col gap-[1.5rem]"
+			>
+				<strong class="text-[2rem]">Novo herói</strong>
+
+				<label class="default-label m-0 text-[1.4rem]">
+					Nome:
+					<input
+						type="text"
+						id="hero-name"
+						class="default-input py-[0.5rem] px-[1rem]"
+					/>
+				</label>
+
+				<label class="default-label m-0 text-[1.4rem]">
+					Poder
+					<input
+						type="text"
+						id="hero-power"
+						class="default-input py-[0.5rem] px-[1rem]"
+					/>
+				</label>
+
+				<div class="mt-auto flex gap-[1rem]">
+					<button class="default-btn flex-1 px-0" id="add-hero-btn">
+						Adicionar
+					</button>
+					<button class="default-btn flex-1 px-0 bg-red-500" id="cancel-btn">
+						Cancelar
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<script type="module" src="js/herois.js"></script>
 	</body>
 </html>
