@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/output.css" />
 	</head>
 	<body
-		class="w-full h-screen bg-[--body-bg] overflow-auto relative flex flex-col"
+		class="w-full h-screen bg-[--body-bg] overflow-y-scroll relative flex flex-col"
 	>
 		<header class="py-[1rem] px-[2rem] w-full bg-white">
 			<div
@@ -63,7 +63,7 @@
 				</label>
 
 				<label class="default-label m-0 text-[1.4rem]">
-					Pular
+					Pular:
 					<input
 						type="number"
 						id="skip-filter"
@@ -74,7 +74,7 @@
 				</label>
 
 				<label class="default-label m-0 text-[1.4rem]">
-					Limite
+					Limite:
 					<input
 						type="number"
 						id="limit-filter"
@@ -85,10 +85,13 @@
 				</label>
 
 				<div class="mt-auto flex gap-[1rem]">
-					<button class="default-btn flex-1 px-0" id="filter-btn">
+					<button class="default-btn m-0 flex-1 px-0" id="filter-btn">
 						Filtrar
 					</button>
-					<button class="default-btn flex-1 px-0 bg-red-500" id="cancel-btn">
+					<button
+						class="default-btn m-0 flex-1 px-0 bg-red-500"
+						id="cancel-btn"
+					>
 						Cancelar
 					</button>
 				</div>
@@ -116,7 +119,7 @@
 				</label>
 
 				<label class="default-label m-0 text-[1.4rem]">
-					Poder
+					Poder:
 					<input
 						type="text"
 						id="hero-power"
@@ -125,13 +128,66 @@
 				</label>
 
 				<div class="mt-auto flex gap-[1rem]">
-					<button class="default-btn flex-1 px-0" id="add-hero-btn">
+					<button class="default-btn m-0 flex-1 px-0" id="add-hero-btn">
 						Adicionar
 					</button>
-					<button class="default-btn flex-1 px-0 bg-red-500" id="cancel-btn">
+					<button
+						class="default-btn m-0 flex-1 px-0 bg-red-500"
+						id="cancel-btn"
+					>
 						Cancelar
 					</button>
 				</div>
+			</form>
+		</div>
+
+		<!-- edit hero modal -->
+		<div
+			id="edit-hero-overlay"
+			class="w-full h-full bg-black/25 absolute hidden items-center justify-center"
+		>
+			<form
+				id="edit-hero-modal"
+				class="p-[2rem] w-[30rem] h-[40rem] bg-white rounded-[0.8rem] shadow-lg flex flex-col gap-[1.5rem]"
+			>
+				<strong class="text-[2rem]">Editar herói</strong>
+
+				<label class="default-label m-0 text-[1.4rem]">
+					Nome:
+					<input
+						type="text"
+						id="edit-hero-name"
+						class="default-input py-[0.5rem] px-[1rem]"
+					/>
+				</label>
+
+				<label class="default-label m-0 text-[1.4rem]">
+					Poder:
+					<input
+						type="text"
+						id="edit-hero-power"
+						class="default-input py-[0.5rem] px-[1rem]"
+					/>
+				</label>
+
+				<div class="mt-auto flex gap-[1rem]">
+					<button class="default-btn m-0 flex-1 px-0" id="edit-hero-btn">
+						Salvar
+					</button>
+					<button
+						class="default-btn m-0 flex-1 px-0 bg-red-500"
+						id="cancel-btn"
+					>
+						Cancelar
+					</button>
+				</div>
+
+				<button
+					id="delete-hero-btn"
+					class="default-btn m-0 bg-white border-2 border-red-500 text-red-500"
+				>
+					Deletar
+				</button>
 			</form>
 		</div>
 
