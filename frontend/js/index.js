@@ -1,19 +1,23 @@
-import { Toast } from './toast.js';
+import { baseURL, toast, clearInputs, handleDisableChildren } from './utils.js';
 
+const loginForm = document.getElementById('login-form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const loginBtn = document.getElementById('login-btn');
 
-const baseURL = 'https://heroes-api-6t0j.onrender.com';
+window.addEventListener('load', () => {
+	const token = localStorage.getItem('@heroes:token');
 
-window.onload = () => {
-	loginBtn.addEventListener('click', login);
-};
+	if (token) {
+		window.location.replace('./herois.html');
+	}
+});
 
-const toast = new Toast(document.body);
+loginBtn.addEventListener('click', login);
 
 async function login(e) {
 	e.preventDefault();
+	handleDisableChildren(loginForm, true);
 
 	if (!username.value.trim() || !password.value.trim()) {
 		toast.showToast('Preencha os campos', 'alert');
@@ -42,7 +46,7 @@ async function login(e) {
 	} catch (error) {
 		toast.showToast('Ocorreu um erro', 'error');
 	} finally {
-		username.value = '';
-		password.value = '';
+		clearInputs(loginForm);
+		handleDisableChildren(loginForm, false);
 	}
 }

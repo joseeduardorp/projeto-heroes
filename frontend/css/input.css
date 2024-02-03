@@ -25,10 +25,10 @@
 	}
 
 	.default-input {
-		@apply p-[1rem] w-full border border-solid border-[#999] rounded-[0.5rem] font-['Roboto'] text-[1.6rem] text-[--bold-text] outline-0;
+		@apply p-[1rem] w-full border border-solid border-[#999] rounded-[0.5rem] font-['Roboto'] text-[1.6rem] text-[--bold-text] outline-0 disabled:opacity-75;
 	}
 
 	.default-btn {
-		@apply mt-[3rem] px-[3rem] py-[1rem] bg-[--btn-bg] border-0 rounded-[0.5rem] opacity-100 transition-opacity duration-300 hover:opacity-90 font-['Roboto'] text-white text-[1.4rem] font-bold uppercase;
+		@apply mt-[3rem] px-[3rem] py-[1rem] bg-[--btn-bg] border-0 rounded-[0.5rem] opacity-100 transition-opacity duration-300 hover:opacity-90 font-['Roboto'] text-white text-[1.4rem] font-bold uppercase disabled:opacity-75;
 	}
 }
