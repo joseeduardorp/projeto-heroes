@@ -23,4 +23,12 @@ function handleDisableChildren(parent, isDisabled = false) {
 	}
 }
 
-export { baseURL, toast, clearInputs, handleDisableChildren };
+function hasToken() {
+	const token = localStorage.getItem('@heroes:token');
+
+	if (!token) {
+		location.replace('./index.html');
+	}
+}
+
+export { baseURL, toast, clearInputs, handleDisableChildren, hasToken };

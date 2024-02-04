@@ -1,4 +1,10 @@
-import { baseURL, toast, clearInputs, handleDisableChildren } from './utils.js';
+import {
+	baseURL,
+	toast,
+	clearInputs,
+	handleDisableChildren,
+	hasToken,
+} from './utils.js';
 
 // containers
 const filterOverlay = document.getElementById('filter-overlay');
@@ -31,7 +37,10 @@ const deleteHeroBtn = document.getElementById('delete-hero-btn');
 let selectedHeroId = null;
 let selectedHeroCard = null;
 
-window.addEventListener('load', filter);
+window.addEventListener('load', (e) => {
+	filter(e);
+	hasToken();
+});
 document.body.addEventListener('click', closeModal);
 
 openFiltersBtn.addEventListener('click', showFilterModal);
