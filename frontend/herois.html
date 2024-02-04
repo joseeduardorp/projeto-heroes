@@ -20,26 +20,28 @@
 			</div>
 		</header>
 
-		<main class="p-[2rem] h-full">
-			<div class="mb-[2rem] pb-[2rem] border-b border-[#999] flex gap-[1rem]">
-				<button
-					id="open-filter-modal"
-					class="default-btn m-0 px-[2rem] flex-1 md:flex-none"
-				>
-					Filtros
-				</button>
-				<button
-					id="open-new-hero-modal"
-					class="default-btn m-0 px-[2rem] flex-1 md:flex-none"
-				>
-					Novo Herói
-				</button>
-			</div>
+		<main class="p-[2rem] w-full h-full">
+			<div class="m-auto max-w-[1280px] w-full">
+				<div class="mb-[2rem] pb-[2rem] border-b border-[#999] flex gap-[1rem]">
+					<button
+						id="open-filter-modal"
+						class="default-btn m-0 px-[2rem] flex-1 md:flex-none"
+					>
+						Filtros
+					</button>
+					<button
+						id="open-new-hero-modal"
+						class="default-btn m-0 px-[2rem] flex-1 md:flex-none"
+					>
+						Novo Herói
+					</button>
+				</div>
 
-			<section
-				id="heroes-container"
-				class="pb-[2rem] grid grid-cols-1 auto-rows-fr gap-[2rem] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-			></section>
+				<section
+					id="heroes-container"
+					class="pb-[2rem] grid grid-cols-1 auto-rows-fr gap-[2rem] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+				></section>
+			</div>
 		</main>
 
 		<!-- filters modal -->

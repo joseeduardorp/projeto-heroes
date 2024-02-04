@@ -795,6 +795,11 @@ html {
   margin-right: auto;
 }
 
+.mx-\[2rem\]{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -809,10 +814,6 @@ html {
 
 .mt-auto{
   margin-top: auto;
-}
-
-.mt-0{
-  margin-top: 0px;
 }
 
 .box-border{
@@ -2171,6 +2172,11 @@ html {
   padding-bottom: 1rem;
 }
 
+.py-\[2rem\]{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-\[2rem\]{
   padding-bottom: 2rem;
 }
@@ -2332,14 +2338,14 @@ html {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-red-500{
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline{
