@@ -795,11 +795,6 @@ html {
   margin-right: auto;
 }
 
-.mx-\[2rem\]{
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -921,6 +916,10 @@ html {
 
 .h-\[40rem\]{
   height: 40rem;
+}
+
+.h-dvh{
+  height: 100dvh;
 }
 
 .h-fit{
@@ -2170,11 +2169,6 @@ html {
 .py-\[1rem\]{
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-\[2rem\]{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .pb-\[2rem\]{
