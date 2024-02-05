@@ -918,10 +918,6 @@ html {
   height: 40rem;
 }
 
-.h-dvh{
-  height: 100dvh;
-}
-
 .h-fit{
   height: -moz-fit-content;
   height: fit-content;
